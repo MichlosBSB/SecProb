@@ -16,8 +16,6 @@ namespace SecProb.Model
         [StringLength(60, MinimumLength = 3, ErrorMessage = "{0} size should be between {2} and {1}")]
         public string Description { get; set; }
         public bool Active { get; set; } = true;
-        public ICollection<Recipient> Recipients { get; set; } = new List<Recipient>(); //one for many
-
 
     }
 }
