@@ -27,7 +27,22 @@ namespace SecProb.Model
         public int EmployeeRoleId { get; set; }
         public virtual EmployeeRole EmployeeRole { get; set; }
 
+        public ICollection<ListSentRecipient> ListSentRecipients { get; set; } = new List<ListSentRecipient>();
 
+        public Recipient()
+        {
+        }
+
+        public Recipient(int id, string colabName, string mail, bool active, EmployeeRole employeeRole)
+        {
+            Id = id;
+            ColabName = colabName;
+            Mail = mail;
+            Active = active;
+            EmployeeRole = employeeRole;
+        }
+
+        
 
     }
 }
